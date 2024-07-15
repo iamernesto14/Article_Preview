@@ -1,4 +1,5 @@
 const shareBtn = document.getElementById("share");
+const shareIcon = document.getElementById("share-icon");
 const detail = document.getElementById("details");
 const popup = document.getElementById("popup");
 
@@ -11,9 +12,13 @@ function toggleSocialIcons() {
     if (popup.classList.contains("hidden")) {
       popup.classList.remove("hidden");
       shareBtn.classList.add("bg-secondary-dark-grayish-blue");
+      shareIcon.classList.add("text-white");
+      shareIcon.children[0].setAttribute("fill", "#ecf2f8");  // Change icon color to white
     } else {
       popup.classList.add("hidden");
-      shareBtn.classList.remove("bg-secondary-dark-grayish-blue");
+      shareBtn.classList.remove("bg-primary-grayish-blue");
+      shareIcon.classList.remove("text-white");
+      shareIcon.children[0].setAttribute("fill", "#ecf2f8");  // Revert icon color to original
     }
   } else {
     // Toggle content replacement on smaller screens
@@ -25,8 +30,10 @@ function toggleSocialIcons() {
           <img src="../images/icon-twitter.svg" class="w-5 h-5" alt="Twitter icon" />
           <img src="../images/icon-pinterest.svg" class="w-5 h-5" alt="Pinterest icon" />
         </div>
-        <p id="share" class="p-2 rounded-full bg-secondary-light-grayish-blue cursor-pointer">
-          <img src="../images/icon-share.svg" alt="Share icon" />
+        <p id="share" class="p-2 rounded-full bg-primary-grayish-blue cursor-pointer">
+          <svg id="share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+            <path fill="#ecf2f8" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+          </svg>
         </p>`;
       
       // Add the new background color class
