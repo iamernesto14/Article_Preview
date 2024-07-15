@@ -1,71 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <script defer src="./script.js"></script>
-
-    <title>Article preview component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  </head>
-  <body
-    class="h-screen bg-secondary-light-grayish-blue flex justify-center items-center"
-  >
-    <div class="max-w-sm rounded-2xl overflow-hidden mx-5 w-full md:max-w-3xl md:flex">
-      <img
-        class="w-full h-52 object-cover md:h-auto md:w-[300px] overflow-hidden flex-none bg-cover"
-        src="../images/drawers.jpg"
-        alt="Sunset in the mountains"
-      />
-      
-      <div class="bg-white md:px-8">
-        <div class="px-6 md:px-0 py-8">
-          <div class="font-bold text-xl mb-5 text-secondary-dark-grayish-blue">
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </div>
-          <p class="text-base text-primary-grayish-blue">
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I’ve got some simple tips to help
-            you make any room feel complete.
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+  <title>Article Preview Component</title>
+</head>
+<body class="h-screen bg-secondary-light-grayish-blue flex justify-center items-center">
+  <div class="md:relative max-w-sm rounded-2xl mx-5 w-full md:max-w-3xl md:flex">
+    <img class="w-full h-52 object-cover md:h-auto md:w-[300px] overflow-hidden flex-none bg-cover rounded-tl-2xl md:rounded-bl-2xl rounded-tr-2xl md:rounded-tr-none" src="../images/drawers.jpg" alt="Sunset in the mountains" />
+    <div class="bg-white md:px-8 rounded-2xl">
+      <div class="px-6 md:px-0 py-8">
+        <div class="font-bold text-xl mb-5 text-secondary-dark-grayish-blue">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
         </div>
-
-        <!-- social media section -->
-        <div class="px-6 md:px-0 pt-4 pb-8 flex justify-between items-center">
-          <div class="flex items-center justify-center gap-5">
-            <img
-              src="../images/avatar-michelle.jpg"
-              class="w-9 h-9 rounded-[50%]"
-              alt=""
-            />
-            <div>
-              <p class="text-[14px] font-bold text-secondary-dark-grayish-blue">Michelle Appleton</p>
-              <p class="text-primary-grayish-blue text-[13px]">28 Jun 2020</p>
-            </div>
+        <p class="text-base text-primary-grayish-blue">
+          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+        </p>
+      </div>
+      <!-- Social media section -->
+      <div id="details" class="px-6 md:px-0 h-16 flex justify-between items-center rounded-b-2xl">
+        <div class="flex items-center justify-center gap-5">
+          <img src="../images/avatar-michelle.jpg" class="w-9 h-9 rounded-full" alt="" />
+          <div>
+            <p class="text-[14px] font-bold text-secondary-dark-grayish-blue">Michelle Appleton</p>
+            <p class="text-primary-grayish-blue text-[13px]">28 Jun 2020</p>
           </div>
-          
-          <!-- share icon -->
-          <p id="share" class="p-2 rounded-full bg-secondary-light-grayish-blue cursor-pointer"><img src="../images/icon-share.svg" alt="an icon of a share button"></p>
         </div>
+        <!-- Share icon -->
+        <p id="share" class="p-2 rounded-full bg-secondary-light-grayish-blue cursor-pointer">
+          <img src="../images/icon-share.svg" alt="Share icon" />
+        </p>
       </div>
     </div>
 
-    
-
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-  </body>
+    <div id="popup" class="hidden absolute z-50 w-[60%] max-w-[190px] bg-secondary-dark-grayish-blue px-1 py-3 rounded shadow-xl -right-6 bottom-16">
+      <div class="absolute w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-secondary-dark-grayish-blue top-full right-[38%] transform translate-x-1/2"></div>
+      <div class="flex items-center justify-center gap-3">
+        <p class="text-primary-grayish-blue tracking-[5px] text-[12px]">SHARE</p>
+        <img src="../images/icon-facebook.svg" class="w-4 h-4" alt="Facebook icon" />
+        <img src="../images/icon-twitter.svg" class="w-4 h-4" alt="Twitter icon" />
+        <img src="../images/icon-pinterest.svg" class="w-4 h-4" alt="Pinterest icon" />
+      </div>
+    </div>
+  </div>
+</body>
 </html>
