@@ -11,14 +11,14 @@ function toggleSocialIcons() {
     // Show or hide the popup
     if (popup.classList.contains("hidden")) {
       popup.classList.remove("hidden");
-      shareBtn.classList.add("bg-gray-600");
+      shareBtn.classList.add("bg-gray-700");
       shareIcon.classList.add("text-white");
-      shareIcon.children[0].setAttribute("fill", "#FFFFFF");  // Change icon color to white
+      shareIcon.children[0].setAttribute("fill", "#fff");  // Change icon color to white
     } else {
       popup.classList.add("hidden");
-      shareBtn.classList.remove("bg-gray-600");
+      shareBtn.classList.remove("bg-gray-700");
       shareIcon.classList.remove("text-white");
-      shareIcon.children[0].setAttribute("fill", "#6E8098");  // Revert icon color to original
+      shareIcon.children[0].setAttribute("fill", "#fff");  // Revert icon color to original
     }
   } else {
     // Toggle content replacement on smaller screens
@@ -26,9 +26,9 @@ function toggleSocialIcons() {
       detail.innerHTML = `
         <div class="flex items-center justify-center gap-4 rounded-b-2xl">
           <p class="text-primary-grayish-blue tracking-[5px]">SHARE</p>
-          <img src="../images/icon-facebook.svg" class="w-5 h-5" alt="Facebook icon" />
-          <img src="../images/icon-twitter.svg" class="w-5 h-5" alt="Twitter icon" />
-          <img src="../images/icon-pinterest.svg" class="w-5 h-5" alt="Pinterest icon" />
+          <img src="./images/icon-facebook.svg" class="w-5 h-5" alt="Facebook icon" />
+          <img src="./images/icon-twitter.svg" class="w-5 h-5" alt="Twitter icon" />
+          <img src="./images/icon-pinterest.svg" class="w-5 h-5" alt="Pinterest icon" />
         </div>
         <p id="share" class="p-2 rounded-full bg-primary-grayish-blue cursor-pointer">
           <svg id="share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
