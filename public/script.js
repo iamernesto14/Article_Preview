@@ -11,14 +11,14 @@ function toggleSocialIcons() {
     // Show or hide the popup
     if (popup.classList.contains("hidden")) {
       popup.classList.remove("hidden");
-      shareBtn.classList.add("bg-secondary-dark-grayish-blue");
+      shareBtn.classList.add("bg-gray-600");
       shareIcon.classList.add("text-white");
-      shareIcon.children[0].setAttribute("fill", "#ecf2f8");  // Change icon color to white
+      shareIcon.children[0].setAttribute("fill", "#FFFFFF");  // Change icon color to white
     } else {
       popup.classList.add("hidden");
-      shareBtn.classList.remove("bg-primary-grayish-blue");
+      shareBtn.classList.remove("bg-gray-600");
       shareIcon.classList.remove("text-white");
-      shareIcon.children[0].setAttribute("fill", "#ecf2f8");  // Revert icon color to original
+      shareIcon.children[0].setAttribute("fill", "#6E8098");  // Revert icon color to original
     }
   } else {
     // Toggle content replacement on smaller screens
